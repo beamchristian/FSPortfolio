@@ -5,7 +5,7 @@ function ProjectsGrid(props) {
   const { projects } = props;
   return (
     <ul className={classes.grid}>
-      {projects.map(post => (
+      {projects.map(project => (
         <ProjectItem />
       ))}
     </ul>
