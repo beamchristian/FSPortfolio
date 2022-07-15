@@ -5,13 +5,7 @@ import classes from './project-item.module.css';
 import link from 'next/link';
 
 function ProjectItem(props) {
-  const { title, image, excerpt, date, slug } = props.project;
-
-  const formattedDate = new Date(date).toLocaleDateString('en-US', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  const { title, image, excerpt, slug } = props.project;
 
   const imagePath = `/images/projects/${slug}/${image}`;
   const linkPath = `/projects/${slug}`;
@@ -31,7 +25,6 @@ function ProjectItem(props) {
           </div>
           <div className={classes.content}>
             <h3>{title}</h3>
-            <time>{formattedDate}</time>
             <p>{excerpt}</p>
           </div>
         </a>
