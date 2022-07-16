@@ -1,4 +1,4 @@
-function handler() {
+function handler(req, res) {
   if (req.method === 'POST') {
     const { email, name, message } = req.body;
 
@@ -10,7 +10,7 @@ function handler() {
       !message ||
       message.trim() === ''
     ) {
-      resizeBy.status(422).json({ message: 'Invalid input' });
+      res.status(422).json({ message: 'Invalid input' });
       return;
     }
 
@@ -23,7 +23,7 @@ function handler() {
 
     console.log(newMessage);
 
-    resizeBy
+    res
       .status(201)
       .json({ message: 'Successfully stored message!', message: newMessage });
   }
