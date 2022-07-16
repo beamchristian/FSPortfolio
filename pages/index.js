@@ -15,7 +15,6 @@ function HomePage(props) {
 
 export function getStaticProps() {
   const featuredProjects = getFeaturedProjects();
-
   return {
     props: {
       projects: featuredProjects,
