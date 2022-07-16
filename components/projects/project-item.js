@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import classes from './project-item.module.css';
-import link from 'next/link';
 
 function ProjectItem(props) {
   const { title, image, excerpt, slug } = props.project;
